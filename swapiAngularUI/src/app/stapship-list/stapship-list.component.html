@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-md-12">
+        <div style="max-height: 300em;overflow: auto;">
+<table class="table table-sm table-bordered table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th>Name</th>
+            <th>Model</th>
+            <th>MGLT</th>
+            <th>Consumables</th>
+            <th>Total Stops</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let starship of starships">
+            <td>{{starship.name}}</td>
+            <td>{{starship.model}}</td>
+            <td>{{starship.mglt}}</td>
+            <td>{{starship.consumables}}</td>
+            <td>{{starship.stopsRequired}}</td>
+        </tr>
+    </tbody>
+</table>
+    </div>
+</div> 
+<div class="row">
+    <div class="col-md-12">
+         <ngb-pagination class="d-flex justify-content-center" *ngIf="totalCount > 0" (pageChange)="onPageChange($event)" [collectionSize]="totalCount" [page]="pageNumber" aria-label="Default pagination"></ngb-pagination>
+    </div>  
+</div>  

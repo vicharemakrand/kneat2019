@@ -1,0 +1,11 @@
+  {
+    "/api": {
+        "target": "https://swapi.co/",
+        "pathRewrite": {
+          "^/api/": "/api/"
+        },
+        "secure": false,
+        "changeOrigin": true,
+        "logLevel": "debug"
+    }
+  }
